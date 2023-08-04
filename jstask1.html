@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #btn{
+            background-color: white;
+            height: 50px;
+            width: 10%;
+            border-radius: 50px 50px ;
+        }
+    
+    
+    </style>
+</head>
+<body>
+
+    <button onclick="pages()" id="page">Log In</button> <br><br>
+    
+    <form id="login">
+        <fieldset style="width: 20%; border-color:black;border-radius : 20px">
+
+        <legend> <h1>Sign In</h1></legend>
+        <label for="">Name   :</label><input type="text"><br><br>
+        <label for="">Password :</label> <input type="text"><br><br>
+        <label for="">Email  :</label><input type="email"><br><br>
+        <label for="">Phone  :</label><input type="email"><br><br>
+
+        <button>Sign In</button> 
+        <button>Cancel</button>
+    </fieldset>
+              
+    </form>
+
+    <form id="signin" style="display: none;">
+        <fieldset style="width: 20%; border-color:black;border-radius : 20px">
+
+        <legend> <h1>Log In</h1></legend>
+        <label for="">User Name :</label><input type="text"><br><br>
+        <label for="">Password :</label> <input type="text"><br><br>
+        
+
+        <button>Log In</button> 
+        <button>Cancel</button>
+    </fieldset>
+
+    </form>
+
+    <script>
+        function pages(){
+            let val = document.getElementById("page").textContent
+
+            if (val === 'SIGN IN'){
+                document.getElementById("page").innerHTML="LOG IN"
+                login.style.display = 'block'
+                signin.style.display = 'none'
+            }
+            else{
+                document.getElementById("page").innerHTML="SIGN IN"
+                signin.style.display = 'block'
+                login.style.display = 'none'
+            }
+        }
+    </script>
+
+</body>
+</html>
+
